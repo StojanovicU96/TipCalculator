@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tip Calculator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='tipCalculator.css'>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://kit.fontawesome.com/796ce6486c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h5 id="title">spli<br>tter</h5>
+    
+    <div class="container-fluid">
+        <div class="row main-section" id="calculator-section">
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-auto mr-auto">
+                        <p class="description-text">Bill</p>
+                    </div>
+
+                    <div class="col-auto">
+                        <p class="error-message" id="bill-error">Can't be zero</p>
+                    </div>
+                </div>
+
+                <label for="" class="icon">$</label>
+                <input id="bill-input" type="text" value="" placeholder="0">
+
+                <p class="description-text">Select tip %</p>
+                <div class="row select-tip-section">
+                    <div class="col-6 col-md-4">
+                        <p class="percent-btn"><span class="amount">5</span>%</p>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <p class="percent-btn"><span class="amount">10</span>%</p>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <p class="percent-btn"><span class="amount">15</span>%</p>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <p class="percent-btn"><span class="amount">20</span>%</p>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <p class="percent-btn"><span class="amount">25</span>%</p>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <input  id="custom-tip" class="percent-btn" type="text" value="" placeholder="Custom">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-auto mr-auto">
+                        <p class="description-text">Number of People</p>
+                    </div>
+
+                    <div class="col-auto">
+                        <p class="error-message" id="num-of-people-error">Can't be zero</p>
+                    </div>
+                </div>
+                <i class="fas fa-user icon"></i>
+                <input id="num-of-people-input" type="text" value="" placeholder="0">
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div id="result-section">
+                    <p class="result-section-text main-txt">Tip Amount</p>
+                    <p class="result-section-text person-txt">/ person</p>
+                    <h3 class="total-money" id="tip-amount">$0.00</h3>
+
+                    <p class="result-section-text main-txt">Total</p>
+                    <p class="result-section-text person-txt">/ person</p>
+                    <h3 class="total-money" id="total">$0.00</h3>
+
+                    <button type="button" disabled>RESET</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='tipCalculator.js'></script>
+</body>
+</html>
